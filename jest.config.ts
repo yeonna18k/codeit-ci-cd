@@ -3,17 +3,17 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
+import type { Config } from "jest";
 
 // jest.config.js
 module.exports = {
   transform: {
-    '^.+\\.jsx?$': 'babel-jest',
-    '^.+\\.tsx?$': 'babel-jest', // TypeScript를 사용한다면 추가
+    "^.+\\.jsx?$": "babel-jest",
+    "^.+\\.tsx?$": "babel-jest", // TypeScript를 사용한다면 추가
   },
   // ESM 사용 시 확장자 설정
-  extensionsToTreatAsEsm: ['.ts', '.tsx', '.js', '.jsx'],
-  testEnvironment: 'node', // 필요한 경우 환경을 node로 설정
+  extensionsToTreatAsEsm: [".ts", ".tsx", ".jsx"],
+  testEnvironment: "node", // 필요한 경우 환경을 node로 설정
 };
 
 const config: Config = {
