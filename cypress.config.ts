@@ -5,5 +5,6 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    baseUrl: 'http://localhost:3000', // Next.js 애플리케이션 기본 URL 설정
   },
 });
