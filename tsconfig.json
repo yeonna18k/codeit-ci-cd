@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
+    // "allowJs": true, // 이걸 끄니까 cypress 실행됨
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
