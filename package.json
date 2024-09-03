@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest",
-    "cy:open": "cypress open"
+    "test": "jest"
   },
   "dependencies": {
     "@sentry/nextjs": "^8.27.0",
