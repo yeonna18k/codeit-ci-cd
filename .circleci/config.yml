@@ -1,14 +1,20 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@3
-executors:
-  default:
-    parameters:
-      node-version:
-        default: 18.18.1
+
+jobs:
+  run-cypress-in-specified-node-version:
+    executor:
+      name: cypress/default
+      node-version: "18.18.1"
+    steps:
+      - cypress/install:
+          package-manager: "npm"
+      - cypress/run-tests:
+          start-command: "npm run build && npm run start"
+          cypress-command: "npx wait-on@latest http://localhost:3000 && npx cypress run"
 workflows:
   use-my-orb:
     jobs:
-      - cypress/run:
-          cypress-command: npx wait-on@latest http://localhost:3000 && npx cypress run
-          start-command: npm run build && npm run start
+      - run-cypress-in-specified-node-version:
+          name: Run Cypress in Node 20
